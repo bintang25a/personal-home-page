@@ -385,7 +385,7 @@ const Home = () => {
                      ))}
                   </ul>
 
-                  <ArticleButton size={1} action={handleToGithub}>
+                  <ArticleButton size={1} action={() => handleToGithub(false)}>
                      <FaGithub className="icon" /> Github
                   </ArticleButton>
                </div>
