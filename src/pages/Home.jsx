@@ -181,11 +181,11 @@ const Home = () => {
       );
    };
 
-   const handleToGithub = (url = false) => {
+   const handleToGithub = (url = "") => {
       setIsOpen(false);
 
       window.open(
-         !url ? "https://github.com/bintang25a" : url,
+         url ? url : "https://github.com/bintang25a",
          "_blank",
          "noopener,noreferrer"
       );
@@ -335,7 +335,7 @@ const Home = () => {
                   <FaLinkedin className="icon" /> LinkedIn
                </ArticleButton>
 
-               <ArticleButton size={3} action={handleToGithub}>
+               <ArticleButton size={3} action={() => handleToGithub(false)}>
                   <FaGithub className="icon" /> Github
                </ArticleButton>
             </article>
