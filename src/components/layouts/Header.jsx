@@ -10,7 +10,7 @@ const Header = ({ isOpen, setIsOpen, theme, setTheme }) => {
 
    useEffect(() => {
       const tempTheme = localStorage.getItem("theme");
-      setBubbleActive(tempTheme !== "high");
+      setBubbleActive(tempTheme !== "high" && tempTheme);
 
       const handleScroll = () => {
          if (window.scrollY > 50) {
