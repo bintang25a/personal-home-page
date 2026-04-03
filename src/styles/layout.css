@@ -338,7 +338,9 @@ footer[theme="dark"] {
          }
       }
       nav.closed {
-         right: -200%;
+         width: 0;
+         overflow: hidden;
+         right: -100%;
       }
 
       .action-container {
