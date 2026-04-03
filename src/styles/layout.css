@@ -333,7 +333,7 @@ footer[theme="dark"] {
             border: none;
          }
 
-         button.theme {
+         .theme-container {
             display: none;
          }
       }
