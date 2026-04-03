@@ -172,5 +172,6 @@ h6 {
    flex-direction: column;
 
    position: relative;
+   overflow-x: hidden;
    padding: 0 var(--px-128);
 }

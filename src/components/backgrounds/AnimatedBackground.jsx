@@ -73,7 +73,7 @@ const AnimatedBackground = () => {
             top: 0,
             left: 0,
             width: "100vw",
-            height: "100vh",
+            height: "100%",
             zIndex: -1,
             background:
                "radial-gradient(circle, var(--gray-700), var(--gray-900), var(--primary))",
