@@ -110,6 +110,9 @@ body {
    /* 5. Improve text rendering */
    -webkit-font-smoothing: antialiased;
 }
+body:has([theme="dark"]) {
+   background-color: var(--gray-900);
+}
 
 /* 6. Improve media defaults */
 img,

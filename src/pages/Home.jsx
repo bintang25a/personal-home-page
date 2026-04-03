@@ -147,6 +147,7 @@ const Home = () => {
       handleScrollPortfolio,
       handleScrollContact,
       setIsOpen,
+      theme,
    } = useOutletContext();
 
    const location = useLocation();
@@ -200,7 +201,7 @@ const Home = () => {
    };
 
    return (
-      <main className="__home-page">
+      <main theme={theme} className="__home-page">
          <section className="hero">
             <article>
                <h2>

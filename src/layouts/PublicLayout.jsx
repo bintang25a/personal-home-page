@@ -4,10 +4,12 @@ import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 
 import "../styles/layout.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AnimatedBackground from "../components/backgrounds/AnimatedBackground";
 
 const PublicLayout = () => {
    const [isOpen, setIsOpen] = useState(false);
+   const [theme, setTheme] = useState("high");
 
    const handleScrollHome = () => {
       window.scrollTo({
@@ -37,9 +39,24 @@ const PublicLayout = () => {
          ?.scrollIntoView({ behavior: "smooth" });
    };
 
+   useEffect(() => {
+      const tempTheme = localStorage.getItem("theme");
+
+      if (!tempTheme) {
+         localStorage.setItem("theme", "high");
+      } else {
+         setTheme(tempTheme);
+      }
+   }, []);
+
    return (
       <>
-         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+         <Header
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            theme={theme}
+            setTheme={setTheme}
+         />
          <Outlet
             context={{
                handleScrollHome,
@@ -48,9 +65,11 @@ const PublicLayout = () => {
                handleScrollPortfolio,
                handleScrollContact,
                setIsOpen,
+               theme,
             }}
          />
-         <Footer />
+         <Footer theme={theme} />
+         {theme == "high" ? <AnimatedBackground /> : null}
       </>
    );
 };

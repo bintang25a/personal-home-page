@@ -21,6 +21,9 @@
    background-color: var(--primary);
    transform: scale(1.05);
 }
+[class*="article-button-"][class*="__action-component"]:active {
+   transform: scale(0.9);
+}
 .article-button-1__action-component {
    margin: var(--px-8) var(--px-8) var(--px-8) 0 !important;
    font-size: var(--fs-3) !important;
