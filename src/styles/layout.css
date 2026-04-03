@@ -376,8 +376,15 @@ footer[theme="dark"] {
          color: var(--secondary);
       }
    }
-   header.scrolled nav {
-      width: 100%;
-      top: var(--px-64);
+   header.scrolled {
+      nav {
+         width: 100%;
+         top: var(--px-64);
+      }
+      nav.closed {
+         width: 0;
+         overflow: hidden;
+         right: -100%;
+      }
    }
 }
