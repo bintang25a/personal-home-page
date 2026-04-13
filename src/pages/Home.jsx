@@ -164,12 +164,23 @@ const Home = () => {
 
          window.history.replaceState({}, document.title);
       }
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [location]);
 
    const handleDownload = () => {
       setIsOpen(false);
+      const filePath = "/files/CV - Full-Stack Web Developer.pdf";
 
-      alert("Download: Coming Soon");
+      const link = document.createElement("a");
+      link.href = filePath;
+
+      // 3. Tentukan nama file saat di-download
+      link.setAttribute("download", "CV - Full-Stack Web Developer.pdf");
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
    };
 
    const handleToLinkedin = () => {

@@ -340,7 +340,7 @@ footer[theme="dark"] {
       nav.closed {
          width: 0;
          overflow: hidden;
-         right: -100%;
+         right: -200%;
       }
 
       .action-container {
@@ -377,6 +377,9 @@ footer[theme="dark"] {
       }
    }
    header.scrolled {
+      position: sticky;
+      top: var(--px-32);
+
       nav {
          width: 100%;
          top: var(--px-64);
@@ -384,7 +387,7 @@ footer[theme="dark"] {
       nav.closed {
          width: 0;
          overflow: hidden;
-         right: -100%;
+         right: -200%;
       }
    }
 }
