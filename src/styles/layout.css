@@ -1,5 +1,5 @@
 header {
-   width: 100%;
+   width: 90%;
    min-height: var(--px-80);
    height: fit-content;
 
@@ -11,7 +11,10 @@ header {
    border-bottom: var(--px-2) solid var(--primary);
    background-color: var(--white);
 
-   position: sticky;
+   left: 50%;
+   transform: translateX(-50%);
+
+   position: fixed;
    top: 0;
    z-index: 1000;
 
@@ -215,7 +218,7 @@ header.scrolled {
    width: 95%;
    min-height: fit-content;
 
-   position: sticky;
+   position: fixed;
    top: var(--px-32);
    align-self: center;
 
@@ -248,6 +251,7 @@ main {
    flex: 1;
    width: 100%;
    height: fit-content;
+   margin-top: var(--px-80);
 }
 
 footer {
@@ -377,7 +381,7 @@ footer[theme="dark"] {
       }
    }
    header.scrolled {
-      position: sticky;
+      position: fixed;
       top: var(--px-32);
 
       nav {
