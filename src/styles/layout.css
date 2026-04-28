@@ -214,6 +214,9 @@ header[theme="dark"] {
       }
    }
 }
+header:has(+ .__it-train) {
+   background-color: transparent;
+}
 header.scrolled {
    width: 95%;
    min-height: fit-content;
